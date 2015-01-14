@@ -1,0 +1,29 @@
+{
+  "name": "Step02-Maps",
+  "version": "0.1.0",
+  "homepage": "http://some-url.com",
+  "authors": [
+    "John Doe <john@doe.com>"
+  ],
+  "description": "AngularUI Map Example",
+  "main": "src/index.html",
+  "keywords": [
+    "angular",
+    "maps"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      "angular": "~1.2.26",
+      "angular-mocks": "~1.2.26",
+      "angular-ui-map": "~0.5.0"
+  }
+}

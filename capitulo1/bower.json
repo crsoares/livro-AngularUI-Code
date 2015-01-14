@@ -1,0 +1,15 @@
+{
+  "name": "Hello World",
+  "version": "0.0.0",
+  "authors": [
+    "crysthiano <crysthiano@cntsistemas.com.br>"
+  ],
+  "description": "Aplicação de arranque extravagante",
+  "license": "MIT",
+  "homepage": "https://github.com/crysthianophp",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.3.8",
+    "angular-mocks": "~1.3.8"
+  }
+}

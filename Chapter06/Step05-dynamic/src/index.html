@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Angular Dashboard: nvd3 charts with external data point</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/nvd3/nv.d3.css">
+</head>
+<body ng-app="myApp">
+  <h1>AngularJS Dashboard</h1>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-default" ng-controller="IssueCtrl">
+        <div class="panel-heading">
+          <b>Top 100 Open Issues with Assignee</b>
+        </div>
+        <div class="panel-body">
+          <div nvd3-pie-chart data="data" width="500" height="500" x="x()" y="y()" showLabels="true" donut="true" donutLabelsOutside="true"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-default" ng-controller="PullCtrl">
+        <div class="panel-heading">
+          <b>Top 100 Pull Requests Closed</b>          
+          <div class="btn-group">
+            <button type="button" class="btn btn-default" ng-click="page = page + 1;loadData();">&laquo;</button>
+            <button type="button" class="btn btn-default" ng-click="page = page - 1;loadData();" ng-disabled="page == 1">&raquo;</button>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div nvd3-stacked-area-chart data="data" showXAxis="true" showYAxis="true" width="500" height="500" showLegend="true"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/d3/d3.js"></script>
+  <script src="bower_components/nvd3/nv.d3.js"></script>
+  <script src="bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+</body>
+</html>
+
