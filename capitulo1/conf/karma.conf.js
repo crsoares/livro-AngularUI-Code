@@ -2,10 +2,10 @@ module.exports = function(config){
 	config.set({
 		basePath: '../',
 		files: [
-			'src/bower/angular/angularjs',
-			'src/bower/anuglar-mocks.js',
+			'src/bower/angular/angular.js',
+			'src/bower/angular-mocks/angular-mocks.js',
 			'src/js/**/*.js',
-			'text/unit/**/*.js'
+			'test/unit/**/*.js'
 		],
 		autoWatch: true,
 		frameworks: ['jasmine'],
