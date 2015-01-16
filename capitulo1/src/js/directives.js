@@ -8,4 +8,5 @@ angular.module("myApp.directives", [])
 				    "<input data-ng-model='name.first' />" +
 				    "<input data-ng-model='name.last' />"
 	};
-});
+})
+.directive('teste', function(){});
