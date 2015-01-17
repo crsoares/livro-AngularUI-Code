@@ -8,10 +8,15 @@
 	<body data-ng-app="myApp">
 		<div data-ng-controller="helloWorldCtrl">
 			<div hello-world name="name"></div>
- 		</div>	
+ 		</div>
+ 		<!--(if target dev)><!-->
+ 		<script src="bower/angular/angular.js"></script>
+ 		<script src="js/app.js"></script>
+ 		<script src="js/controllers.js"></script>
+ 		<script src="js/directives.js"></script>
+ 		<!--<!(endif)-->
+ 		<!--(if target dist)><!-->
+ 		<script src="js/my-hello-world.js"></script>
+ 		<!--<!(endif)-->
 	</body>
-	<script src="bower/angular/angular.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/controllers.js"></script>
-	<script src="js/directives.js"></script>
 </html>
