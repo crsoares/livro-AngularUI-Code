@@ -2,21 +2,41 @@
 <html>
 	<head>
 		<meta charset="utf8">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<title>Hello world</title>
+		<link rel="stylesheet" href="css/vendor/bootstrap.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body data-ng-app="myApp">
-		<div data-ng-controller="helloWorldCtrl">
-			<div hello-world name="name"></div>
+		<div class="container" data-ng-controller="helloWorldCtrl">
+			<div class="row spacer-sm">
+				<label class="col-xs-5 text-right" for="fname">First Name</label>
+				<input class="col-xs-7" type="text" id="fname" ng-model="person.firstName" 
+				ui-event="{ focus: 'focusCallback()', blur: 'blurCallback()' }">
+			</div>
+			<div class="row	spacer-sm">
+				<label class="col-xs-5 text-right" for="lname">Last Name</label>
+				<input class="col-xs-7" type="text" id="lname" ng-model="person.lastName">
+			</div>
+			<div class="row spacer-sm">
+				<label class="col-xs-5 text-right" for="phone">Phone</label>
+				<input class="col-xs-7" type="tel" id="phone" ui-mask="{{ mask }}" ng-model="person.phone">
+			</div>
+			<div class="row spacer-lg">
+				<pre ng-style="modelStatus()" class="col-xs-12">
+					<code>{{ getModel() }}</code>
+				</pre>
+			</div>
  		</div>
  		<!--(if target dev)><!-->
  		<script src="bower/angular/angular.js"></script>
+ 		<script src="js/vendor/ui-utils.js"></script>
  		<script src="js/app.js"></script>
  		<script src="js/controllers.js"></script>
  		<script src="js/directives.js"></script>
  		<!--<!(endif)-->
  		<!--(if target dist)><!-->
- 		<script src="js/my-hello-world.js"></script>
+ 		<script src="js/fun-with-ui-utils.js"></script>
  		<!--<!(endif)-->
 	</body>
 </html>
