@@ -1,0 +1,2 @@
+webdriver-manager start
+http-server -a localhost -p 8000
