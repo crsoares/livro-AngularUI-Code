@@ -6,8 +6,10 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['src/bower/angular/angular.js',
+        src: ['src/bower/jquery/dist/jquery.js',
+              'src/bower/angular/angular.js',
               'src/js/vendor/ui-utils.js',
+              'src/js/vendor/bootstrap.js',
               'src/js/app.js',
               'src/js/controllers.js',
               'src/js/directives.js'],

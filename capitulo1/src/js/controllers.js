@@ -28,4 +28,11 @@ angular.module('myApp.controllers', [])
 		$scope.helpText = "Fácil. Basta digitar seu nome.";
 		$timeout(function() { $scope.helpText = "" }, 10000);
 	};
+
+	$scope.tooltip = function() {
+		if (!$scope.person.hasOwnProperty("phone")) {
+			return $scope.person.firstName + " has no phone?";
+		}
+		else { return "All good."}
+	};
 });
