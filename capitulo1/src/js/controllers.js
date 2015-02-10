@@ -1,11 +1,26 @@
 'use strict';
 angular.module('myApp.controllers', [])
-.controller('helloWorldCtrl', function ($scope, $timeout) {
+.controller('MapCtrl', function ($scope, $timeout) {
 	$scope.person = {
 		firstName: "Jane",
 		lastName: "Doe"
 	};
 	$scope.mask = "(999) 999-9999 ext 99";
+
+	$scope.myMarkers = [];
+
+	$scope.mapOptions = {
+		center: new google.maps.LatLng(37.782, -122.418),
+		zoom: 4,
+		mapTypeId: google.maps.MapTypeId.SATELLITE
+	};
+
+	var cloudLayer = new google.maps.weather.CloudLayer();
+
+	$timeout(function(){
+		cloudLayer.setMap($scope.myMap);
+	}, 1000);
+
 	$scope.getModel = function () {
 		return JSON.stringify($scope.person, undefined, 2);
 	};
